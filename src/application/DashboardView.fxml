@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashboardViewController">
+   <children>
+      <AnchorPane prefHeight="615.0" prefWidth="1130.0">
+         <children>
+            <VBox layoutX="1.0" prefHeight="615.0" prefWidth="413.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff;">
+               <children>
+                  <Label prefHeight="167.0" prefWidth="399.0" text="E COMMERCE INVENTORY MANAGEMENT SYSTEM" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Cambria Math" size="29.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="414.0">
+                     <children>
+                        <ImageView fitHeight="57.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/icons8-buy-for-change-80%20(1).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" top="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <MenuButton fx:id="inventoryButton" alignment="CENTER" mnemonicParsing="false" prefHeight="88.0" prefWidth="262.0" style="-fx-background-radius: 40; -fx-background-color: #1e1c1c; -fx-border-radius: 40; -fx-border-color: #ffffff;" text="Inventory Module" textFill="WHITE">
+                          <items>
+                            <MenuItem fx:id="addProductMenu" mnemonicParsing="false" onAction="#handleAddProductClick" text="                  Add Product                   " />
+                              <MenuItem fx:id="productListMenu" mnemonicParsing="false" onAction="#handleProductListClick" text="                  Product List                " />
+                          </items>
+                           <font>
+                              <Font name="Cambria Bold Italic" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </MenuButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="83.0" prefWidth="399.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/icons8-search-property-80%20(1).png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" top="15.0" />
+                           </HBox.margin></ImageView>
+                        <MenuButton fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" prefHeight="83.0" prefWidth="264.0" style="-fx-background-color: #1e1c1c; -fx-background-radius: 40; -fx-border-color: #ffffff; -fx-border-radius: 40;" text="Search Module" textFill="WHITE">
+                           <items>
+                              <MenuItem fx:id="searchByIdMenu" mnemonicParsing="false" onAction="#handleSearchByIdClick" text="Search Product by ID" />
+                              <MenuItem fx:id="searchByNameMenu" mnemonicParsing="false" onAction="#handleSearchByNameClick" text="Search Product by Name" />
+                              <MenuItem fx:id="searchByPurchasePriceMenu" mnemonicParsing="false" onAction="#handleSearchByPurchasePriceClick" text="Search Product by Purchase Price    " />
+                              <MenuItem fx:id="searchBySalesPriceMenu" mnemonicParsing="false" onAction="#handleSearchBySalesPriceClick" text="Search Product by Sales Price" />
+                              <MenuItem fx:id="searchByQuantityMenu" mnemonicParsing="false" onAction="#handleSearchByQuantityClick" text="Search Product by Quantity" />
+                           </items>
+                           <font>
+                              <Font name="Cambria Bold Italic" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <TabPane layoutX="414.0" prefHeight="615.0" prefWidth="725.0" style="-fx-background-color: #2E4053;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab style="-fx-background-color: #ffffff;" text="About Us">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="576.0" prefWidth="714.0" style="-fx-background-color: #1e1c1c;">
+                           <children>
+                              <Label layoutX="2.0" layoutY="109.0" prefHeight="193.0" prefWidth="725.0" style="-fx-background-color: #000000;" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab style="-fx-background-color: #ffffff;" text="Help">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #1e1c1c;" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>

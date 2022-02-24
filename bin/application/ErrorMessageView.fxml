@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ErrorMessageViewController">
+	<children>
+		<AnchorPane prefHeight="476.0" prefWidth="574.0" style="-fx-background-color: #000000;">
+			<children>
+				<Label layoutX="186.0" layoutY="14.0" prefHeight="57.0" prefWidth="202.0" style="-fx-background-color: #ffffff;" text="        ERROR!" textFill="RED">
+					<font>
+						<Font name="Times New Roman Bold" size="25.0" />
+					</font>
+				</Label>
+				<AnchorPane layoutX="48.0" layoutY="87.0" prefHeight="334.0" prefWidth="485.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;">
+					<children>
+						<VBox layoutX="45.0" layoutY="15.0" prefHeight="304.0" prefWidth="395.0">
+							<children>
+								<Label fx:id="errorMessageLabel" alignment="CENTER" prefHeight="237.0" prefWidth="395.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+									<font>
+										<Font name="System Bold Italic" size="25.0" />
+									</font>
+								</Label>
+								<Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleErrorCloseButtonClick" prefHeight="39.0" prefWidth="90.0" style="-fx-background-radius: 20;" text="Close">
+									<font>
+										<Font name="Times New Roman Bold Italic" size="18.0" />
+									</font>
+									<VBox.margin>
+										<Insets left="150.0" />
+									</VBox.margin>
+								</Button>
+							</children>
+						</VBox>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</children>
+</FlowPane>
